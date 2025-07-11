@@ -118,11 +118,11 @@ body {
 }
 
 .project_card_tags {
-    @apply flex flex-row
+    @apply flex flex-row mt-4;
 }
 
 .project_card_tag {
-    @apply font-inconsolata rounded-full text-xs font-bold text-port-gray-200 px-2 py-1;
+    @apply m-1 font-inconsolata rounded-full text-xs font-bold text-port-gray-200 px-2 py-1;
 }
 
 
