@@ -46,9 +46,18 @@ body {
 }
 
 .page_header {
-    @apply flex flex-col text-center items-center justify-center my-16;
-    @apply w-full h-96 bg-cover bg-center;
+    @apply flex flex-col mx-auto text-center items-center justify-center;
+    @apply w-full lg:w-[1366px] h-[682px];
+    @apply bg-slate-800 bg-cover bg-center;
     background-image: url('../images/Background_Intro.png');
+}
+
+.header_wrap {
+    @apply lg:w-[1040px] lg:max-h-[434px] overflow-auto;
+}
+
+.hero_profile_pic {
+    @apply mx-auto rounded-full w-[112px] h-[112px] border-3 border-port-red-500 my-5;
 }
 
 .hero_hello {
@@ -60,15 +69,15 @@ body {
 }
 
 .hero_title {
-    @apply font-asap text-port-gray-600 font-bold text-4xl md:text-5xl leading-30;
+    @apply font-asap text-port-gray-600 font-bold text-4xl md:text-5xl leading-15 mt-5;
 }
 
 .hero_description {
-    @apply font-maven text-port-gray-400 text-sm md:text-base leading-8;
+    @apply font-maven text-port-gray-400 text-sm md:text-base mt-5;
 }
 
 .hero_skills {
-    @apply flex flex-row my-20;
+    @apply flex flex-row justify-center mt-10;
 }
 
 .hero_skill {
@@ -78,7 +87,8 @@ body {
 
 
 .page_projects {
-    @apply flex flex-col text-center items-center justify-center my-16;
+    @apply flex flex-col text-center items-center justify-center w-full max-w-[1366px] mx-auto;
+    @apply lg:min-h-[921px];
 }
 
 .projects_subtitle {
@@ -90,7 +100,7 @@ body {
 }
 
 .projects_grid {
-    @apply grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8;
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 lg:w-[1040px];
 }
 
 .project_card {
@@ -126,14 +136,17 @@ body {
 }
 
 
-
-
-
-
-
 .page_contact {
-    @apply flex flex-col text-center items-center justify-center my-16;
+    @apply flex flex-col mx-auto text-center items-center justify-center;
+    @apply w-full lg:w-[1366px] h-[787px];
+    @apply bg-slate-800 bg-cover bg-center;
+    background-image: url('../images/Background_Contacts.png');
 }
+
+
+/* .page_contact {
+    @apply flex flex-col text-center items-center justify-center my-16;
+} */
 
 .contact_subtitle {
     @apply font-inconsolata text-port-purple-500;
@@ -148,7 +161,7 @@ body {
 }
 
 .contact_links {
-    @apply w-full my-10;
+    @apply w-full lg:w-[400px] my-10;
 }
 
 .contact_link {

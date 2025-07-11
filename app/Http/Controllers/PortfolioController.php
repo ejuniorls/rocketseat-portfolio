@@ -11,6 +11,11 @@ class PortfolioController extends Controller
      */
     public function index()
     {
+        $user = [
+            "name"              => "Roberto Coelho",
+            "profile_picture"   => "profile_square.png"
+        ];
+
         $projects = [
             [
                 "title"         => "Travelgram",
@@ -54,17 +59,17 @@ class PortfolioController extends Controller
             [
                 "icon" => "ph-linkedin-logo",
                 "page" => "linkedin",
-                "link" => "https://www.linkedin.com/in/ejuniorls/",
+                "link" => "https://www.linkedin.com/",
             ],
             [
                 "icon" => "ph-github-logo",
                 "page" => "github",
-                "link" => "https://github.com/ejuniorls",
+                "link" => "https://github.com/",
             ],
             [
                 "icon" => "ph-instagram-logo",
                 "page" => "instagram",
-                "link" => "https://www.instagram.com/ejuniorls",
+                "link" => "https://www.instagram.com/",
             ],
             [
                 "icon" => "ph-envelope-simple",
@@ -74,8 +79,9 @@ class PortfolioController extends Controller
         ];
 
         return view('index', [
-            "projects" => $projects,
-            "contacts" => $contacts,
+            "user"      => $user,
+            "projects"  => $projects,
+            "contacts"  => $contacts,
         ]);
     }
 

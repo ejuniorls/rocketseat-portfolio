@@ -23,19 +23,26 @@
 <body>
     <div class="container mx-auto px-5">
         <header class="page_header hero">
-            <p class="hero_hello">Hello World! Meu nome é <span class="hero_name">Martina Santos</span> e sou</p>
-            <h1 class="hero_title">Desenvolvedora PHP</h1>
-            <p class="hero_description">Transformo necessidades em aplicações reais, evolventes e funcionais. Desenvolvo
-                sistemas através da minha paixão pela tecnologia, contribuindo com soluções inovadoras e eficazes para
-                desafios complexos.</p>
+            <div class="header_wrap">
+                <img src="{{ asset('images/' . $user['profile_picture']) }}" alt="profile image"
+                    class="hero_profile_pic">
+                <p class="hero_hello">Hello World! <br> Meu nome é <span class="hero_name">{{ $user['name'] }}</span> e
+                    sou</p>
+                <h1 class="hero_title">Desenvolvedor PHP</h1>
+                <p class="hero_description">Transformo necessidades em aplicações reais, evolventes e funcionais.
+                    Desenvolvo
+                    sistemas através da minha paixão pela tecnologia, contribuindo com soluções inovadoras e eficazes
+                    para
+                    desafios complexos.</p>
 
-            <ul class="hero_skills">
-                <li class="hero_skill bg-port-green-500">GitHub</li>
-                <li class="hero_skill bg-port-purple-500">PHP</li>
-                <li class="hero_skill bg-port-blue-500">CSS</li>
-                <li class="hero_skill bg-port-red-500">HTML</li>
-                <li class="hero_skill bg-port-yellow-500">Javascript</li>
-            </ul>
+                <ul class="hero_skills">
+                    <li class="hero_skill bg-port-green-500">GitHub</li>
+                    <li class="hero_skill bg-port-purple-500">PHP</li>
+                    <li class="hero_skill bg-port-blue-500">CSS</li>
+                    <li class="hero_skill bg-port-red-500">HTML</li>
+                    <li class="hero_skill bg-port-yellow-500">Javascript</li>
+                </ul>
+            </div>
         </header>
 
         <section class="page_projects projects">
