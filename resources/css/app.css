@@ -1,0 +1,156 @@
+@import 'tailwindcss';
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Maven+Pro:wght@400..900&display=swap');
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-asap: "Asap", sans-serif;
+    --font-inconsolata: "Inconsolata", monospace;
+    --font-maven: "Maven Pro", sans-serif;
+
+    --color-port-red-500: #E3646E;
+    --color-port-purple-500: #BB72E9;
+    --color-port-blue-500: #3996DB;
+    --color-port-green-500: #82BC4F;
+    --color-port-yellow-500: #EABD5F;
+
+    --color-port-gray-100: #0D0E11;
+    --color-port-gray-200: #16181D;
+    --color-port-gray-300: #292C34;
+    --color-port-gray-400: #878EA1;
+    --color-port-gray-500: #C0C4CE;
+    --color-port-gray-600: #E2E4E9;
+}
+
+@layer utilities {
+    .font-asap {
+        font-family: var(--font-asap);
+    }
+
+    .font-inconsolata {
+        font-family: var(--font-inconsolata);
+    }
+
+    .font-maven {
+        font-family: var(--font-maven);
+    }
+}
+
+
+body {
+    @apply bg-port-gray-200;
+}
+
+.page_header {
+    @apply flex flex-col text-center items-center justify-center my-16;
+    @apply w-full h-96 bg-cover bg-center;
+    background-image: url('../images/Background_Intro.png');
+}
+
+.hero_hello {
+    @apply font-inconsolata text-port-gray-500;
+}
+
+.hero_name {
+    @apply font-inconsolata text-port-red-500;
+}
+
+.hero_title {
+    @apply font-asap text-port-gray-600 font-bold text-4xl md:text-5xl leading-30;
+}
+
+.hero_description {
+    @apply font-maven text-port-gray-400 text-sm md:text-base leading-8;
+}
+
+.hero_skills {
+    @apply flex flex-row my-20;
+}
+
+.hero_skill {
+    @apply rounded-full px-2 py-1 text-sm m-1 text-port-gray-200 font-semibold;
+}
+
+
+
+.page_projects {
+    @apply flex flex-col text-center items-center justify-center my-16;
+}
+
+.projects_subtitle {
+    @apply font-inconsolata text-port-red-500;
+}
+
+.projects_title {
+    @apply font-asap text-port-gray-600 font-bold text-2xl leading-15;
+}
+
+.projects_grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8;
+}
+
+.project_card {
+    @apply flex flex-col md:flex-row bg-port-gray-300 rounded-lg p-4;
+}
+
+.project_card_image {
+    @apply w-full md:w-[224px] md:h-[156px] rounded-lg flex-shrink-0 mb-4 md:mb-0;
+}
+
+.project_card_image>img {
+    @apply w-full rounded-lg;
+}
+
+.project_card_content {
+    @apply text-left mt-4 md:mt-0 md:ml-4 flex-1;
+}
+
+.project_card_title {
+    @apply font-asap font-bold text-base text-port-gray-600;
+}
+
+.project_card_description {
+    @apply font-maven font-normal text-base text-port-gray-500;
+}
+
+.project_card_tags {
+    @apply flex flex-row
+}
+
+.project_card_tag {
+    @apply font-inconsolata rounded-full text-xs font-bold text-port-gray-200 px-2 py-1;
+}
+
+
+
+
+
+
+
+.page_contact {
+    @apply flex flex-col text-center items-center justify-center my-16;
+}
+
+.contact_subtitle {
+    @apply font-inconsolata text-port-purple-500;
+}
+
+.contact_title {
+    @apply font-asap text-port-gray-600 font-bold text-2xl leading-15;
+}
+
+.contact_description {
+    @apply font-maven font-normal text-base text-port-gray-500;
+}
+
+.contact_links {
+    @apply w-full my-10;
+}
+
+.contact_link {
+    @apply flex items-center justify-between px-4 py-3 rounded-lg bg-port-gray-300 hover:border-2 hover:border-port-gray-600 transition text-left w-full leading-10 mb-6;
+}
